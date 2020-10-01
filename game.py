@@ -6,7 +6,7 @@ Created on Wed Apr 15 21:45:47 2020
 """
 
 import tkinter
-
+from PIL import ImageTk
 import random
 
 
@@ -126,7 +126,9 @@ class ColorGame:
 
 
 new_window = tkinter.Tk()
-
+new_window.resizable(False,False)
+new_window.bg = ImageTk.PhotoImage(file="1222.jpg")
+new_window.bg_image=tkinter.Label(new_window,image=new_window.bg).place(x=0,y=0)
 game = ColorGame(new_window)
 
 new_window.mainloop()
